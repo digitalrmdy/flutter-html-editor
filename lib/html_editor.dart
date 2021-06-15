@@ -26,6 +26,7 @@ class HtmlEditor extends StatefulWidget {
   final String widthImage;
   final bool showBottomToolbar;
   final String hint;
+  final String addImageText;
 
   HtmlEditor(
       {Key key,
@@ -35,7 +36,8 @@ class HtmlEditor extends StatefulWidget {
       this.useBottomSheet = true,
       this.widthImage = "100%",
       this.showBottomToolbar = true,
-      this.hint})
+      this.hint,
+      this.addImageText = 'Voeg afbeelding toe'})
       : super(key: key);
 
   @override
@@ -150,7 +152,8 @@ class HtmlEditorState extends State<HtmlEditor> {
               ? Padding(
                   padding: const EdgeInsets.only(
                       left: 4.0, right: 4, bottom: 8, top: 2),
-                  child: widgetIcon(Icons.image, "Image", onKlik: () {
+                  child:
+                      widgetIcon(Icons.image, widget.addImageText, onKlik: () {
                     widget.useBottomSheet
                         ? bottomSheetPickImage(context)
                         : dialogPickImage(context);
@@ -261,13 +264,13 @@ class HtmlEditorState extends State<HtmlEditor> {
         onKlik();
       },
       child: Container(
-        color: Colors.white12,
         child: Row(
           mainAxisSize: MainAxisSize.max,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Icon(
               icon,
-              color: Colors.black38,
+              color: Colors.white,
               size: 20,
             ),
             Padding(
@@ -275,7 +278,7 @@ class HtmlEditorState extends State<HtmlEditor> {
               child: Text(
                 title,
                 style: TextStyle(
-                    color: Colors.black54,
+                    color: Colors.white,
                     fontSize: 16,
                     fontWeight: FontWeight.w400),
               ),
