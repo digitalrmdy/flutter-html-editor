@@ -158,39 +158,6 @@ class HtmlEditorState extends State<HtmlEditor> {
                         ? bottomSheetPickImage(context)
                         : dialogPickImage(context);
                   }),
-                  // Row(
-                  //   // mainAxisAlignment: MainAxisAlignment.spaceAround,
-                  //   mainAxisSize: MainAxisSize.max,
-                  //   children: <Widget>[
-                  //     widgetIcon(Icons.image, "Image", onKlik: () {
-                  //       widget.useBottomSheet
-                  //           ? bottomSheetPickImage(context)
-                  //           : dialogPickImage(context);
-                  //     }),
-                  //     // widgetIcon(Icons.content_copy, "Copy", onKlik: () async {
-                  //     //   String data = await getText();
-                  //     //   Clipboard.setData(new ClipboardData(text: data));
-                  //     // }),
-                  //     // widgetIcon(Icons.content_paste, "Paste",
-                  //     //     onKlik: () async {
-                  //     //   ClipboardData data =
-                  //     //       await Clipboard.getData(Clipboard.kTextPlain);
-                  //     //
-                  //     //   String txtIsi = data.text
-                  //     //       .replaceAll("'", '\\"')
-                  //     //       .replaceAll('"', '\\"')
-                  //     //       .replaceAll("[", "\\[")
-                  //     //       .replaceAll("]", "\\]")
-                  //     //       .replaceAll("\n", "<br/>")
-                  //     //       .replaceAll("\n\n", "<br/>")
-                  //     //       .replaceAll("\r", " ")
-                  //     //       .replaceAll('\r\n', " ");
-                  //     //   String txt =
-                  //     //       "\$('.note-editable').append( '" + txtIsi + "');";
-                  //     //   _controller.evaluateJavascript(txt);
-                  //     // }),
-                  //   ],
-                  // ),
                 )
               : Container(
                   height: 1,
